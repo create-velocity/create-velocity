@@ -1,6 +1,9 @@
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { NextUIProvider } from '@nextui-org/react';
+
+import './globals.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +12,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <NextUIProvider>
+        <App />
+      </NextUIProvider>
     </BrowserRouter>
   </StrictMode>
 );
